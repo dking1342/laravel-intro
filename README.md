@@ -1,3 +1,12 @@
+# Laravel Crash Course
+
+## Documentation
+Documentation for the code base can be found <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9hL6aCFKyagrT1RCfVN4w2Q">here</a>
+
+## Explanation
+This covers a pizza ordering app with Laravel use cases and examples.
+
+## Laravel Standard Info
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
