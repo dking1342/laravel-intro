@@ -23,9 +23,6 @@
                 The North's Best Pizza
             </div>
 
-
-
-
         </div>
     </div>
 @endsection
