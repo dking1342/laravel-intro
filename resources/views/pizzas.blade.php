@@ -6,15 +6,7 @@
 
         @foreach($pizzas as $pizza)
             <div class="border-gray-200">
-                <p>Index: {{ $loop->index }}</p>
-                <p>Type: {{ $pizza["type"] }}</p>
-                <p>Base: {{ $pizza["base"] }}</p>
-                @if($loop->first)
-                    <p>first loop!!</p>
-                @endif
-                @if($loop->last)
-                    <p>last loop!!</p>
-                @endif
+                {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} - {{ $pizza->price }}
             </div>
         @endforeach
 
