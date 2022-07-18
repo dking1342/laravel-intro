@@ -4,9 +4,6 @@
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <h1 class="title">Pizza List</h1>
 
-        <p>{{ $name }}</p>
-        <p>{{ $age }}</p>
-
         @foreach($pizzas as $pizza)
             <div class="border-gray-200">
                 <p>Index: {{ $loop->index }}</p>
@@ -21,9 +18,6 @@
             </div>
         @endforeach
 
-        @for($i = 0; $i < count($pizzas);$i++)
-            <p>{{ $pizzas[$i]["type"] }}</p>
-        @endfor
     </div>
 </div>
 @endsection
