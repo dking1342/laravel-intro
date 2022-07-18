@@ -8,17 +8,16 @@ class PizzaController extends Controller{
 
   public function index(){
       // get data from db
-      // $pizzas = Pizza::all();
-      // $pizzas = Pizza::orderBy("name","desc")->get();
-      // $pizzas = Pizza::where("type", "hawaiian")->get();
-      $pizzas = Pizza::latest()->get();
+      $pizzas = Pizza::all();
   
       return view('pizzas.index',["pizzas"=>$pizzas]);
   }
 
   public function show($id){
         // query db for id
-        return view("pizzas.show",["id"=>$id]);
+        $pizza = Pizza::findOrFail($id);
+
+        return view("pizzas.show",["pizza"=>$pizza]);
   }
 
   public function create(){
