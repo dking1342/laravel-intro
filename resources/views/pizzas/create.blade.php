@@ -1,11 +1,28 @@
 @extends("layouts.layout")
 
 @section("content")
-<div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-        <h1 class="title">Pizza Create</h1>
-
-
-    </div>
+<div class="wrapper create-pizza">
+    <h1>Create a New Pizza</h1>
+    <form action="/pizzas" method="POST">
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name">
+        <label for="type">Choose pizza type:</label>
+        <select name="type" id="type">
+            <option value="null" selected disabled></option>
+            <option value="margarita">Margarita</option>
+            <option value="hawaiian">Hawaiian</option>
+            <option value="supreme">Supreme</option>
+            <option value="volcano">Volcano</option>
+        </select>
+        <label for="type">Choose base type:</label>
+        <select name="base" id="base">
+            <option value="null" selected disabled></option>
+            <option value="cheesy crust">Cheesy crust</option>
+            <option value="garlic crust">Garlic crust</option>
+            <option value="thin & crispy">Thin & crispy</option>
+            <option value="thick">Thick</option>
+        </select>
+        <input type="submit" value="Order Pizza">
+    </form>
 </div>
 @endsection
