@@ -31,6 +31,7 @@ class PizzaController extends Controller{
     $pizza->type = request("type");
     $pizza->base = request("base");
     $pizza->price = 10;
+    $pizza->toppings = request("toppings");
 
     $pizza->save();
     return redirect("/")->with("message","Thanks for your order");

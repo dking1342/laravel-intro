@@ -6,7 +6,10 @@
 
         @foreach($pizzas as $pizza)
             <div class="border-gray-200">
-                {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} - {{ $pizza->price }}
+                <a href="{{ url('/pizzas/'.$pizza->id ) }}">
+                    {{ $pizza->name }} - {{ $pizza->type }} - {{ $pizza->base }} - {{ $pizza->price }}
+
+                </a>
             </div>
         @endforeach
 
