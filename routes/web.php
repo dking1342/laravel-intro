@@ -18,11 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizzas', [PizzaController::class,"index"])->middleware(['auth']);
-Route::get("/pizzas/create",[PizzaController::class,"create"]);
-Route::post("/pizzas",[PizzaController::class,"store"]);
-Route::get("/pizzas/{id}", [PizzaController::class,"show"])->middleware(['auth']);
-Route::delete("/pizzas/{id}", [PizzaController::class,"destroy"])->middleware(['auth']);
+Route::get('/pizzas', [PizzaController::class,"index"])->middleware(['auth'])->name("pizzas.index");
+Route::get("/pizzas/create",[PizzaController::class,"create"])->name("pizzas.create");
+Route::post("/pizzas",[PizzaController::class,"store"])->name("pizzas.store");
+Route::get("/pizzas/{id}", [PizzaController::class,"show"])->middleware(['auth'])->name("pizzas.show");
+Route::delete("/pizzas/{id}", [PizzaController::class,"destroy"])->middleware(['auth'])->name("pizzas.destroy");
 
 Route::get('/dashboard', function () {
     return view('dashboard');

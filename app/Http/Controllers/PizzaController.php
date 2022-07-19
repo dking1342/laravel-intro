@@ -13,7 +13,8 @@ class PizzaController extends Controller{
 
   public function index(){
       // get data from db
-      $pizzas = Pizza::all();
+      $pizzas = Pizza::latest()->get();
+      // $pizzas = Pizza::orderBy("created_at","desc")->get();
   
       return view('pizzas.index',["pizzas"=>$pizzas]);
   }
