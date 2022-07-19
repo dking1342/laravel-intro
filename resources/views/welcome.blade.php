@@ -22,6 +22,7 @@
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0 title">
                 The North's Best Pizza
             </div>
+            <p class="message">{{ session("message") }}</p>
             <a href="/pizzas/create">Order a Pizza</a>
         </div>
     </div>
